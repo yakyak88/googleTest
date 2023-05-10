@@ -4,8 +4,8 @@ const GoogleClass = require("./GoogleClass");
 describe("Google search", () => {
     let browser;
     let page;
-    const KEY_STRING = "ynet";
-    const EXPECTED_URL = "https://www.ynet.co.il/home/0,7340,L-8,00.html";
+    const KEY_STRING = "puppeteer";
+    const EXPECTED_URL = "https://pptr.dev/";
     let googleClass;
     beforeAll(async () => {
         browser = await puppeteer.launch({
@@ -17,7 +17,7 @@ describe("Google search", () => {
     });
 
     afterAll(async () => {
-        // await browser.close();
+        await browser.close();
     });
 
     test("search for puppeteer on Google", async () => {
